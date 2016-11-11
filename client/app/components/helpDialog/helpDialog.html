@@ -1,0 +1,17 @@
+<md-dialog id="help-dialog">
+
+    <span class="dialog-title">About {{ Help.title }}</span>
+
+    <md-divider></md-divider>
+
+    <!-- this is where each page injects their custom template for the dialog -->
+    <md-dialog-content class="dialog-content font-italic">
+    <ng-include src="Help.contentsTemplateUrl"></ng-include>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row" class="dialog-actions">
+        <span flex></span>
+        <md-button class="md-raised close-button" ng-click="Help.hide()">Close</md-button>
+    </md-dialog-actions>
+
+</md-dialog>

@@ -1,0 +1,21 @@
+<div id="login">
+    <md-toolbar class="login-alert" ng-show="Login.alertMessage">
+        <div class="md-toolbar-tools">
+            <span>{{ Login.alertMessage }}</span>
+        </div>
+    </md-toolbar>
+    <form ng-submit="Login.submit(Login.newUser)">
+        <div class="login-modal" layout="column">
+            <img class="logo" src="../../../assets/img/DCX-full.svg">
+            <md-input-container id="username">
+                <label>Username</label>
+                <input required ng-model="Login.newUser.username"/>
+            </md-input-container>
+            <md-input-container id="password">
+                <label>Password</label>
+                <input required type="password" ng-model="Login.newUser.password"/>
+            </md-input-container>
+            <md-button class="dcx-blue text-white" type="submit">Log in</md-button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,11 @@
+<md-dialog class="md-padding" id="idle-session">
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <span>Your session has become idle.</span>
+        </div>
+    </md-toolbar>
+    <md-dialog-content class="progress-half">
+        <span class="logged-out-text">You will be logged out in <span class="dcx-blue-text">{{ IdleSession.countdownSeconds }}</span> seconds</span>
+        <md-progress-linear md-mode="determinate" value="{{IdleSession.countdown}}"></md-progress-linear>
+    </md-dialog-content>
+</md-dialog>

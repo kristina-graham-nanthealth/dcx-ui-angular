@@ -1,0 +1,28 @@
+#nodes .page-body {
+    padding: 15px;
+}
+
+#nodes .online-text {
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+#nodes .number-nodes {
+    margin-left: 7px;
+}
+
+#nodes .card-holder {
+    margin-top: 20px;
+}
+
+#nodes .node-card {
+    margin: 5px 10px;
+}
+
+#nodes a {
+    color: #00aadf;
+}
+
+#nodes .select-all {
+    padding-left: 4px;
+}

@@ -1,0 +1,75 @@
+/**
+
+This is where styling code that can be used application-wide should be stored
+
+*/
+
+/*general styling to ensure the page is as large as it can be */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+/* set the font for the entire app */
+body button, input, select, textarea, table, td, tr, span {
+    font-family: "lato", Helvetica, Arial, sans-serif;
+    text-transform: none;
+}
+
+/* this div is the top level div and exists in index.html. Setting position to relative here allows us to set the
+footer to the bottom of the page using position:absolute within this wrapper
+*/
+#wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+.dcx-blue {
+    background-color: #00aadf;
+}
+
+.dcx-blue-text {
+    color: #00aadf;
+}
+
+.text-white {
+    color: white;
+}
+
+.dcx-green-text {
+    color: #22cb06;
+}
+
+.font-bold {
+    font-weight: bold;
+}
+
+.font-italic {
+    font-style: italic;
+}
+
+/* use these header-bar classes to configure page's top row. Most pages have a so-named header-bar and if used
+correctly these classes will do the majority of the heavy lifting. See gateways or nodes for examples
+*/
+.header-bar {
+    margin-top: 20px;
+    padding: 0 10px 10px 10px;
+    border-bottom: solid rgba(0, 0, 0, 0.12) 1px;
+}
+
+.header-bar .header-text {
+    margin-top: 15px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+.header-bar button {
+    max-height: 35px;
+}
+
+.header-bar md-input-container {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,62 @@
+<md-dialog class="md-padding" id="add-gateway-dialog">
+
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+            <h2>Add Gateway</h2>
+            <span flex></span>
+        </div>
+    </md-toolbar>
+
+    <md-dialog-content>
+        <form>
+            <md-list>
+                <md-list-item class="md-1-line">
+                    <span flex="40" class="form-label">Name:</span>
+                    <md-input-container flex="60">
+                        <label>name</label>
+                        <input ng-model="AddGateway.newGateway.name">
+                    </md-input-container>
+                </md-list-item>
+                <md-list-item class="md-1-line">
+                    <span flex="40" class="form-label">Connected To:</span>
+                    <md-input-container flex="60">
+                        <md-select ng-model="AddGateway.newGateway.connection">
+                            <md-option ng-repeat="connection in AddGateway.connections" value="{{connection.name}}">
+                                {{connection.name}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                </md-list-item>
+                <md-list-item class="md-1-line">
+                    <span flex="40" class="form-label">Listen Port:</span>
+                    <md-input-container flex="15">
+                        <label>port</label>
+                        <input ng-model="AddGateway.newGateway.port">
+                    </md-input-container>
+                </md-list-item>
+                <md-list-item class="md-1-line">
+                    <span flex="40" class="form-label">Driver:</span>
+                    <md-input-container flex="60">
+                        <md-select ng-model="AddGateway.newGateway.driver">
+                            <md-option ng-repeat="driver in AddGateway.drivers" value="{{driver.name}}">
+                                {{driver.name}}
+                            </md-option>
+                        </md-select>
+                    </md-input-container>
+                </md-list-item>
+                <md-list-item class="md-1-line">
+                    <span flex="40">Auto-Configure Devices<br>(applies to newly created devices)</span>
+                    <span flex="5"></span>
+                    <md-switch class="md-warn" ng-model="AddGateway.newGateway.autoConfigure"></md-switch>
+                </md-list-item>
+            </md-list>
+        </form>
+    </md-dialog-content>
+
+    <md-dialog-actions>
+        <md-divider></md-divider>
+        <md-button class="md-raised" ng-click="AddGateway.cancel()">Cancel</md-button>
+        <md-button class="md-raised md-warn" ng-click="AddGateway.save()">Save</md-button>
+    </md-dialog-actions>
+
+</md-dialog>

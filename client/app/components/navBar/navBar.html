@@ -1,0 +1,29 @@
+<md-toolbar id="navbar">
+    <div class="md-toolbar-tools" layout="row">
+        <a ui-sref="{{NavBar.mapState}}" href="">
+            <img src="../../../assets/img/DCX-reversed.svg">
+        </a>
+        <md-input-container class="search-box">
+            <label>search</label>
+            <input/>
+        </md-input-container>
+        <span class="navbar-text">Filter by</span>
+        <md-button id="all-groups-button" class="md-raised">All Groups</md-button>
+        <span flex></span>
+        <div layout="row">
+            <md-menu ng-repeat="menu in NavBar.menus">
+                <md-button ng-click="$mdOpenMenu($event)">
+                    {{ menu.title }}
+                    <i class="fa fa-sort-desc arrow-down"></i>
+                </md-button>
+                <md-menu-content width="2">
+                    <md-menu-item ng-repeat="item in menu.menuItems">
+                        <md-button ui-sref="{{item.state}}({{item.stateParams}})">
+                            {{item.title}}
+                        </md-button>
+                    </md-menu-item>
+                </md-menu-content>
+            </md-menu>
+        </div>
+    </div>
+</md-toolbar>

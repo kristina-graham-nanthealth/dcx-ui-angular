@@ -1,0 +1,30 @@
+.nant-node-card {
+    padding: 7px;
+    min-height: 100px;
+    min-width: 175px;
+}
+
+.card-selected .nant-node-card {
+    border-style: solid;
+    border-width: 15px 15px 3px 3px;
+    border-image: url("../../../../assets/img/checkedBox.png") 25 25 3 3 stretch;
+    padding-top: 0;
+    padding-right: 0;
+}
+
+.nant-node-card .building-icon {
+    padding-right: 4px;
+}
+
+.nant-node-card .card-row {
+    margin-top: 7px;
+}
+
+.nant-node-card .pad-left {
+    padding-left: 17px;
+}
+
+.nant-node-card .heart-icon {
+    padding-left: 4px;
+}
+

@@ -1,0 +1,40 @@
+<div id="nodes">
+
+    <div class="header-bar" layout="row">
+        <span class="header-text">Group by</span>
+        <md-input-container flex="15">
+            <md-select ng-model="Nodes.selectedGrouping">
+                <md-option ng-repeat="grouping in Nodes.groupings" value="{{grouping}}">
+                    {{grouping}}
+                </md-option>
+            </md-select>
+        </md-input-container>
+        <span flex></span>
+        <div layout="column">
+            <div layout="row">
+                <span flex ng-show="Nodes.editMode"></span>
+                <md-button class="md-raised" ng-click="Nodes.toggleEditMode()">Edit Mode</md-button>
+            </div>
+            <div layout="row" ng-show="Nodes.editMode">
+                <md-button class="md-raised">Hide</md-button>
+                <md-button class="md-raised">Properties</md-button>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-body">
+        <div layout="row">
+            <span class="online-text">Online</span>
+            <span class="number-nodes">({{Nodes.online.length}})</span>
+            <a href="" ng-show="Nodes.editMode" ng-click="Nodes.selectAll()"><span class="select-all">Select All</span></a>
+        </div>
+        <div layout="row" class="card-holder" layout-wrap>
+            <nant-node-card class="node-card" name="node.name" time="node.timeCameUp"
+                            desc="node.description" online="node.online" selected="node.selected" edit-mode="Nodes.editMode"
+                            ng-repeat="node in Nodes.online">
+
+            </nant-node-card>
+        </div>
+    </div>
+
+</div>

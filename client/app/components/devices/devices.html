@@ -1,0 +1,10 @@
+<div ng-cloak>
+    <md-content>
+        <md-tabs md-dynamic-height md-border-bottom>
+            <md-tab label="{{tab.label}}" ng-repeat="tab in Devices.tabs">
+                <div ng-include="tab.templateUrl">
+                </div>
+            </md-tab>
+        </md-tabs>
+    </md-content>
+</div>

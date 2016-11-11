@@ -1,0 +1,12 @@
+#idle-session {
+    min-height: 125px;
+    min-width: 600px;
+}
+
+#idle-session .logged-out-text {
+    font-size: 18px;
+}
+
+#idle-session .progress-half {
+    margin-top: 30px;
+}

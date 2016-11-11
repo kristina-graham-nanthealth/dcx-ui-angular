@@ -1,0 +1,11 @@
+<div class="nant-node-card md-whiteframe-3dp" layout="column">
+    <div layout="row" class="card-row">
+        <i class="fa fa-building building-icon" ng-class="{'dcx-green-text': online}"></i>
+        <span> {{ name }}</span>
+    </div>
+    <div layout="row" class="card-row pad-left">
+        <span>{{ time | timeSince }}</span>
+        <i class="fa fa-heart heart-icon"></i>
+    </div>
+    <span class="card-row pad-left">{{ desc }}</span>
+</div>

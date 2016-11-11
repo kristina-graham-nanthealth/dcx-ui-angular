@@ -1,0 +1,6 @@
+node_modules/
+bower_components/
+.idea
+dist.dev/
+dist.pro/
+config/local.env.json

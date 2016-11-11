@@ -1,0 +1,10 @@
+<md-dialog id="not-authorized" class="md-padding">
+    <md-dialog-content layout="column">
+        <img src="../../../assets/img/notAuthorized.jpg">
+        <span class="warning-text">You are not authorized to view this page</span>
+    </md-dialog-content>
+    <md-dialog-actions class="buttons">
+        <md-button class="md-raised md-primary" ng-click="UserNot.okay()">Okay</md-button>
+        <md-button class="md-raised md-warn" ng-click="UserNot.login()">Login with different credentials</md-button>
+    </md-dialog-actions>
+</md-dialog>

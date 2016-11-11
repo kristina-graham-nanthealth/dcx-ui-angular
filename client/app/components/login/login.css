@@ -1,0 +1,38 @@
+.login-background {
+    background: white url("../../../assets/img/login-bkgd.jpg") no-repeat center center;
+    background-size: cover;
+}
+
+#login .login-alert {
+    background-color: #fff6d3;
+    border-color: #fff3c3;
+    color: #b99500;
+    min-width: 360px;
+    max-width: 360px;
+    border-radius: 5px;
+    position: absolute;
+    top: 10%;
+    left: 40%;
+}
+
+#login .login-modal {
+    background-color: white;
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    min-width: 360px;
+    padding: 30px 20px;
+    border-radius: 5px;
+}
+
+#login md-input-container#username {
+    margin: 40px 0 0 0;
+}
+
+#login md-input-container#password {
+    margin: 25px 0 25px 0;
+}
+
+#login md-input-container.md-input-has-value label, #login md-input-container.md-input-focused label {
+    color: #f6a548 !important;
+}

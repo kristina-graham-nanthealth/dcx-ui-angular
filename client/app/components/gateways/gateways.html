@@ -1,0 +1,20 @@
+<div id="gateways">
+
+    <div class="header-bar" layout="row">
+        <md-button class="md-raised" ng-click="Gateways.addGateway($event)">
+            <i class="fa fa-plus"></i>
+            Add Gateway
+        </md-button>
+        <span class="header-text">Group by</span>
+        <md-input-container flex="15">
+            <md-select ng-model="Gateways.selectedGrouping">
+                <md-option ng-repeat="grouping in Gateways.groupings" value="{{grouping}}">
+                    {{grouping}}
+                </md-option>
+            </md-select>
+        </md-input-container>
+        <span flex></span>
+        <md-button class="md-raised">Edit Mode</md-button>
+    </div>
+
+</div>

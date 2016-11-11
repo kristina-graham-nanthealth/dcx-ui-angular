@@ -1,0 +1,33 @@
+#navbar .navbar-text {
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+#navbar span {
+    font-size: 16px;
+}
+
+#navbar .search-box {
+    background-color: white;
+    margin: 0 5px 0 10px;
+    max-height: 30px;
+    border-radius: 3px;
+}
+
+/*
+ * the floating label on the search box cannot turn orange when elevated during focus and it cannot turn grey when
+ * the user has input something. So we override here to be white in both cases
+ */
+#navbar md-input-container.md-input-has-value label, #navbar md-input-container.md-input-focused label {
+    color: white !important;
+}
+
+#all-groups-button {
+    background-color: #00aadf;
+    color: white;
+}
+
+#navbar .arrow-down {
+    position: relative;
+    bottom: 4px;
+}

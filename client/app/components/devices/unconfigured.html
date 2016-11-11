@@ -1,0 +1,11 @@
+<div>
+    Group By
+    <md-input-container>
+        <label>Type</label>
+        <md-select ng-model="Devices.groupByType">
+            <md-option ng-repeat="type in Devices.groupByTypes" value="{{type.value}}">
+                {{type.name}}
+            </md-option>
+        </md-select>
+    </md-input-container>
+</div>

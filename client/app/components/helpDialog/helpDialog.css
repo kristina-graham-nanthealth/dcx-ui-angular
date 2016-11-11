@@ -1,0 +1,26 @@
+#help-dialog {
+    min-width: 40%;
+    max-width: 40%;
+    padding: 15px;
+    position: absolute;
+    top: 10%;
+    left: 30%;
+}
+
+#help-dialog .dialog-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#help-dialog .dialog-content {
+    line-height: 150%;
+    margin-bottom: 10px;
+}
+
+#help-dialog .dialog-actions {
+    border-top: solid rgba(0,0,0,0.12) 1px;
+}
+
+#help-dialog .close-button {
+    background-color: #E1E1E1;
+}

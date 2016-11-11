@@ -1,0 +1,13 @@
+#not-authorized {
+    min-width: 300px;
+    /*min-height: 500px;*/
+}
+
+#not-authorized .warning-text {
+    font-size: 20px;
+    text-align: center;
+}
+
+#not-authorized .buttons {
+    margin-top: 25px;
+}

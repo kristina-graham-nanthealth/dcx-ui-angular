@@ -1,0 +1,100 @@
+#parameters .body-divider {
+    padding-top: 25px;
+}
+
+#parameters a {
+    color: #00aadf;
+}
+
+#parameters .column-label {
+    font-size: 22px;
+}
+
+#parameters .border-box {
+    border: solid black 1px;
+    border-radius: 5px;
+    overflow: auto;
+    min-height: 500px;
+    max-height: 500px;
+}
+
+#parameters .available-box {
+}
+
+#parameters md-list.parameter-list {
+    padding: 0;
+}
+
+#parameters md-list.parameter-list md-input-container {
+    margin: 18px 0 0 0;
+}
+
+#parameters .parameter-list .ng-hide {
+    visibility: hidden;
+    display: initial !important;
+}
+
+#parameters .md-list-item-text {
+    padding-left: 10px;
+}
+
+#parameters .list-item {
+    border-top: solid black 1px;
+}
+
+#parameters .outbound-parameters {
+    margin-left: 15px;
+    margin-right: 15px;
+    position: relative;
+}
+
+#parameters .outbound-parameter-row {
+    padding: 8px 0 8px 16px;
+}
+
+#parameters .parameter-name {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+#parameters .no-parameters-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#parameters .selected-headers-row {
+    padding: 8px;
+}
+
+#parameters .outbound-background-grey {
+    background-color: #f0f1f2;
+}
+
+#parameters .selected-headers {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#parameters .outbound-parameters md-input-container {
+    margin: 0;
+    max-height: 30px;
+}
+
+#parameters .outbound-parameters .static-text {
+    position: relative;
+    top: 10px;
+}
+
+#parameters .outbound-parameters .hidden-box {
+ background-color: #f0f1f2;
+}
+
+#parameters .outbound-parameters md-input-container {
+    background-color: white;
+}
+
+#parameters .outbound-parameters md-input-container.md-input-has-value label, #parameters .outbound-parameters md-input-container.md-input-focused label {
+    color: rgba(0,0,0,0.54) !important;
+}

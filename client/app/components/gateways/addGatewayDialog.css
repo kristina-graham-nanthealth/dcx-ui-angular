@@ -1,0 +1,7 @@
+#add-gateway-dialog {
+    min-width: 40%;
+}
+
+#add-gateway-dialog .form-label {
+    font-weight: bold;
+}

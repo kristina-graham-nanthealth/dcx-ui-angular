@@ -1,0 +1,144 @@
+<div id="parameters" class="md-padding">
+    <div layout="column" class="md-margin">
+        <div layout="row">
+            <md-input-container flex="33">
+                <label>Select a device driver</label>
+                <md-select ng-model="Parameters.indexSelected" md-on-close="Parameters.setParameters()">
+                    <md-option ng-repeat="driver in Parameters.drivers" value="{{$index}}">
+                        {{driver.name}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+        <div layout="row">
+            <a href="#">Migrate Parameters</a>
+        </div>
+    </div>
+    <md-divider></md-divider>
+    <div layout="row" class="body-divider">
+        <span class="column-label" flex="33">Available</span>
+        <span class="column-label">Outbound</span>
+        <span flex></span>
+        <md-button class="dcx-blue text-white">Save</md-button>
+    </div>
+    <div layout="row" class="body-divider">
+        <div flex="33" class="border-box available-box">
+            <md-list class="parameter-list">
+                <md-list-item>
+                    <md-input-container flex>
+                        <label>search</label>
+                        <input ng-model="Parameters.searchText"/>
+                    </md-input-container>
+                </md-list-item>
+                <md-list-item class="md-2-line list-item"
+                              ng-repeat="parameter in Parameters.parameters | filter : {name: Parameters.searchText}"
+                              ng-click="Parameters.toggleParameterSelected(parameter)">
+                    <i class="fa fa-check" ng-show="parameter.selected"></i>
+                    <div class="md-list-item-text" layout="column">
+                        <div layout="row">
+                            <h3 class="parameter-name"> {{ parameter.name }}</h3><h4> {{ parameter.uom }}</h4>
+                        </div>
+                        <div layout="row">
+                            <p>{{ parameter.description }}</p>
+                        </div>
+                    </div>
+                </md-list-item>
+            </md-list>
+        </div>
+        <div flex="66" class="border-box outbound-parameters" ng-class="{'outbound-background-grey': !Parameters.anySelected()}">
+            <div layout="row" class="selected-headers-row outbound-background-grey">
+                <div flex="30">
+                    <span class="selected-headers">Driver Parameter</span>
+                </div>
+                <div flex="30">
+                    <span class="selected-headers">Outbound Name</span>
+                </div>
+                <div flex="20">
+                    <span class="selected-headers">Outbound UOM</span>
+                </div>
+                <div flex="20">
+                </div>
+            </div>
+
+            <div layout="row" ng-hide="Parameters.anySelected()" class="no-parameters-text">
+                <span>No parameters have been set up to publish. Click on an available parameter (left) to get started.</span>
+            </div>
+
+            <div layout="column"
+                 ng-repeat="parameterSelected in Parameters.parameters | filter : { selected: true }">
+
+                <div layout="row" class="list-item outbound-parameter-row">
+                    <div flex="20">
+                        <div layout="column">
+                            <span class="parameter-name">{{parameterSelected.name}}</span>
+                            <span>Driver UOM: {{parameterSelected.uom}}</span>
+                        </div>
+                    </div>
+                    <div flex="10">
+                        <span class="static-text">display as</span>
+                    </div>
+                    <div flex="30">
+                        <md-input-container>
+                            <label></label>
+                            <input ng-model="parameterSelected.name"/>
+                        </md-input-container>
+                    </div>
+                    <div flex="20">
+                        <md-input-container>
+                            <label></label>
+                            <input ng-model="parameterSelected.uom"/>
+                        </md-input-container>
+                    </div>
+                    <div flex="10">
+                        <a class="static-text" href="" ng-click="Parameters.toggleExtended(parameterSelected.name)">
+                            <div ng-show="!Parameters[parameterSelected.name].extended">
+                                <span>More</span>
+                                <i class="fa fa-sort-desc"></i>
+                            </div>
+                            <div ng-show="Parameters[parameterSelected.name].extended">
+                                <span>Less</span>
+                                <i class="fa fa-sort-asc"></i>
+                            </div>
+                        </a>
+                    </div>
+                    <div flex="10">
+                        <a class="static-text" href=""
+                           ng-click="Parameters.toggleParameterSelected(parameterSelected)"><span
+                                class="fa fa-trash"></span></a>
+                    </div>
+                </div>
+
+                <div layout="row" ng-show="Parameters[parameterSelected.name].extended" class="hidden-box">
+                    <div layout="column" class="md-padding">
+                        <div layout="row">
+                            <span>UOM Conversion</span>
+                        </div>
+                        <br>
+                        <div layout="row">
+                            <md-input-container>
+                                <label>Type</label>
+                                <md-select ng-model="parameterSelected.conversionType">
+                                    <md-option ng-repeat="conversion in Parameters.conversions">
+                                        {{conversion}}
+                                    </md-option>
+                                </md-select>
+                            </md-input-container>
+                        </div>
+                        <br>
+                        <div layout="row">
+                            <md-input-container>
+                                <label>Decimal Precision</label>
+                                <input ng-model="parameterSelected.precision"/>
+                            </md-input-container>
+                            <div>
+                                <span>Precision Example:</span>
+                                <span>{{ parameterSelected.precision | precisionExample }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

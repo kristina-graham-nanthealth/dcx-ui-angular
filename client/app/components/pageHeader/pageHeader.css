@@ -1,0 +1,16 @@
+#page-header {
+    background-color: #f3f4f5 !important;
+}
+
+#page-header .page-header-text {
+    color: black;
+    font-size: 28px;
+}
+
+#page-header a {
+    color: #00aadf;
+}
+
+#page-header .help-text {
+    padding-left: 20px;
+}
